@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="VDt-YX-VYG">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +13,105 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Dapp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Standalone DAPP" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4ph-iV-YLx">
+                                <rect key="frame" x="20" y="40" width="335" height="119.5"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="50"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oAD-hI-nn3">
+                                <rect key="frame" x="93" y="549" width="189" height="38"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="21"/>
+                                <state key="normal" title="Select QTUM wallet"/>
+                                <connections>
+                                    <action selector="selectWalletButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VD3-nh-GCW"/>
+                                </connections>
+                            </button>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fGB-oa-MKa">
+                                <rect key="frame" x="64" y="323.5" width="246" height="40"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="23"/>
+                                <state key="normal" title="Send Dapp transaction"/>
+                                <connections>
+                                    <action selector="actionButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cdc-cd-vfm"/>
+                                </connections>
+                            </button>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Vrs-m3-ExS">
+                                <rect key="frame" x="29.5" y="271" width="315" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VZW-Wm-jKi">
+                                <rect key="frame" x="0.0" y="10" width="375" height="667"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Success!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vCF-dE-bzN">
+                                        <rect key="frame" x="120" y="315" width="133.5" height="37"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="31"/>
+                                        <color key="textColor" red="0.2614094615" green="0.58695566649999997" blue="0.39219757910000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="vCF-dE-bzN" firstAttribute="centerY" secondItem="VZW-Wm-jKi" secondAttribute="centerY" id="hTT-m6-N62"/>
+                                    <constraint firstItem="vCF-dE-bzN" firstAttribute="centerX" secondItem="VZW-Wm-jKi" secondAttribute="centerX" id="o9d-pr-UPu"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="4ph-iV-YLx" secondAttribute="trailing" constant="20" id="2cc-kO-g6f"/>
+                            <constraint firstItem="fGB-oa-MKa" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="7bf-bE-hmk"/>
+                            <constraint firstItem="4ph-iV-YLx" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="9bW-yB-kV1"/>
+                            <constraint firstItem="fGB-oa-MKa" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="H34-Ws-J7a"/>
+                            <constraint firstItem="VZW-Wm-jKi" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="ILN-5I-Ksz"/>
+                            <constraint firstItem="VZW-Wm-jKi" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="Kob-x4-dy3"/>
+                            <constraint firstItem="4ph-iV-YLx" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="TWD-cd-Khb"/>
+                            <constraint firstItem="Vrs-m3-ExS" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="XEA-fF-gNH"/>
+                            <constraint firstItem="VZW-Wm-jKi" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="Xbv-fQ-WIn"/>
+                            <constraint firstItem="Vrs-m3-ExS" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" constant="-60" id="fIp-RA-zRR"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="oAD-hI-nn3" secondAttribute="bottom" constant="80" id="rV0-hX-8Qg"/>
+                            <constraint firstItem="fGB-oa-MKa" firstAttribute="top" secondItem="Vrs-m3-ExS" secondAttribute="bottom" constant="31" id="s89-er-x5o"/>
+                            <constraint firstItem="oAD-hI-nn3" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="sag-7J-Eoc"/>
+                            <constraint firstItem="VZW-Wm-jKi" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" id="uSO-YG-251"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" id="DWl-kH-89n"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <connections>
+                        <outlet property="infoLabel" destination="Vrs-m3-ExS" id="NWM-Ng-qcW"/>
+                        <outlet property="selectWalletButton" destination="oAD-hI-nn3" id="GVh-Bd-suH"/>
+                        <outlet property="sendButton" destination="fGB-oa-MKa" id="tsz-1J-1gX"/>
+                        <outlet property="successView" destination="VZW-Wm-jKi" id="no3-M0-xQJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1079.2" y="133.5832083958021"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="1Yx-wb-Zrz">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="VDt-YX-VYG" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Anb-p2-wnt">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="SYK-Q8-Wa6"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Kdu-us-lJW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="356" y="134"/>
         </scene>
     </scenes>
 </document>
